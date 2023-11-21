@@ -8,16 +8,25 @@
     <!-- Bootsrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./style/index.css">
+    <style>
+        body {
+            box-sizing: border-box;
+        }
 
-    <title>Home</title>
+        .navbar {
+            /* background-color: rgba(242, 247, 250, .5); */
+            background-color: #14274E !important;
 
+        }
+    </style>
+
+
+    <title>Kegiatan</title>
 </head>
 
 <body>
 
-    <!-- navbar -->
+    <!-- nav -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -29,7 +38,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active text-bold" aria-current="page" href="#">Home</a>
+                        <a class="nav-link " aria-current="page" href="index.php">Home</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Profil Sekolah</a>
@@ -40,18 +49,18 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="visimisi.php">Visi Misi</a></li>
-                            <li><a class="dropdown-item" href="profil.php">Profil Sekolah</a></li>
+                            <li><a class="dropdown-item" href="">Profil Sekolah</a></li>
                             <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="kegiatan.php">Kegiatan</a>
+                        <a class="nav-link active text-bold" href="kegiatan.php">Kegiatan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="direktori.php">Direktori</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Hubungi Kami</a>
+                        <a class="nav-link" href="hubungi.php">Hubungi Kami</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,21 +83,58 @@
             </div>
         </div>
     </nav>
-    <!-- akhir navbar -->
+    <!-- akhir nav -->
 
-    <!-- Bg -->
-    <div class="masthead" style="background-image: url(image/bgasli.jpg);">
-        <div class="color-overlay d-flex justify-content-center align-items-center">
-            <h1 class="animate__animated animate_fadeInUp">Selamat Datang</h1>
+    <!-- card -->
+    <div class="container p-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a short card.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- akhir bg -->
+
+    <!--akhir card  -->
+
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 
 
 </body>

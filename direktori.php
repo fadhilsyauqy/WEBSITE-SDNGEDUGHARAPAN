@@ -1,5 +1,5 @@
 <?php
-require 'siswa/functions.php';
+require 'admin/functions.php';
 $siswa = query("SELECT * FROM siswa");
 
 
@@ -23,15 +23,15 @@ if (isset($_POST["cari"])) {
 
     <link rel="stylesheet" href="style/tbsiswa.css">
 
-    <title>Data Siswa </title>
+    <title>Direktori </title>
 
 </head>
 
 <body>
 
     <!-- navbar -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow" style="background-color: palevioletred;">
-        <div class="container">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
                 SD N Gunung Harapan
@@ -41,23 +41,46 @@ if (isset($_POST["cari"])) {
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="index.php">Home</a>
+                        <a class="nav-link  text-bold" aria-current="page" href="index.php">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Profil Sekolah</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle text-bold" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false aria-current=">
-                            Data Sekolah
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Profil
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="datasiswa.php">Data Siswa</a></li>
-                            <li><a class="dropdown-item" href="#">Data Guru</a></li>
+                            <li><a class="dropdown-item" href="visimisi.php">Visi Misi</a></li>
+                            <li><a class="dropdown-item" href="profil.php">Profil Sekolah</a></li>
                             <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="siswa/login.php">Admin</a>
+                        <a class="nav-link" href="kegiatan.php">Kegiatan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="direktori.php">Direktori</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hubungi.php">Hubungi Kami</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Direktori
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="datasiswa.php">Data Siswa</a></li>
+                                <li><a class="dropdown-item" href="#">Data Guru</a></li>
+                            </ul>
+                        </li> -->
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="admin/login.php">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -67,7 +90,7 @@ if (isset($_POST["cari"])) {
 
 
 
-    
+
     <div class="container mt-3">
         <h1 class="text-start mb-3">Daftar Siswa </h1>
 
@@ -76,7 +99,7 @@ if (isset($_POST["cari"])) {
             <button class="btn btn-success" name="cari" type="submit">Telusuri</button>
         </form>
 
-        <table border="2" class="table table-responsive table-hover shadow rounded-4 mx-auto m-3 rounded-3" >
+        <table border="2" class="table table-responsive table-hover shadow rounded-4 mx-auto m-3 rounded-3">
 
             <tr>
                 <th>No.</th>
@@ -95,7 +118,7 @@ if (isset($_POST["cari"])) {
                     <td><?= $row["gender"]; ?></td>
                     <td><?= $row["alamat"]; ?></td>
 
-                    </tr>
+                </tr>
                 <?php $i++; ?>
             <?php endforeach; ?>
         </table>
