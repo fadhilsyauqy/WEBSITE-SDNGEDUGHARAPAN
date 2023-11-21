@@ -1,0 +1,46 @@
+body{
+    min-height: 100vh;
+}
+
+nav {
+    /* background-color: rgba(242, 247, 250, .5); */
+    background-color: #14274E;
+    
+}
+
+.masthead {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 2);
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 1.5rem;
+}
+
+.color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(220, 59%, 19%, 0.871);
+}
+
+@media(max-width: 768px) {
+    .masthead {
+        min-height: 65vh;
+        background-position: center;
+    }
+
+    h1 {
+        font-size: calc(0.525rem + 3.3vw);
+        text-align: center;
+        font-size: 2rem;
+        position: absolute;
+    }
+}
