@@ -45,13 +45,14 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="kegiatan.php">Kegiatan</a>
+                        <a class="nav-link" href="kegiatan.php">Kegiatan
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="direktori.php">Direktori</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Hubungi Kami</a>
+                        <a class="nav-link" href="hubungi.php">Hubungi Kami</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
