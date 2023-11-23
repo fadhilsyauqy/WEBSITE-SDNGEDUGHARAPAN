@@ -2,30 +2,30 @@
 session_start();
 
 if (!isset($_SESSION["login"])) {
-    header("Location: login.php");
+    header("Location: ../admin/login.php");
     exit;
 }
 
 
-require 'functions.php';
+require '../admin/functions.php';
 
 
 //cek apakah tombol sudaah ditekan atau belum
 if (isset($_POST["submit"])) {
 
     //cek apakah data berhasil ditambahkan atau tidak
-    if (tambah($_POST) > 0) {
+    if (tambah_kgt($_POST) > 0) {
         echo "
             <script>
                 alert('DATA BERHASIL DITAMBAH');
-                document.location.href = 'edit.php'
+                document.location.href = '../set_kegiatan/index.php'
             </script>
         ";
     } else {
         echo "
             <script>
                 alert('DATA GAGAL DITAMBAH');
-                document.location.href = 'edit.php';
+                document.location.href = '../set_kegiatan/index.php';
             </script>
         ";
     }

@@ -2,11 +2,11 @@
 session_start();
 
 if (!isset($_SESSION["login"])) {
-    header("Location: login.php");
+    header("Location: ../admin/login.php");
     exit;
 }
 
-require 'functions.php';
+require '../admin/functions.php';
 
 //ambil data  di url
 $id = $_GET["id"];
@@ -23,14 +23,14 @@ if (isset($_POST["submit"])) {
         echo "
             <script>
                 alert('DATA BERHASIL DIUBAH');
-                document.location.href = 'edit.php'
+                document.location.href = '../set_siswa/index.php'
             </script>
         ";
     } else {
         echo "
             <script>
                 alert('DATA GAGAL DIUBAH');
-                document.location.href = 'edit.php';
+                document.location.href = '../set_siswa/index.php';
             </script>
         ";
     }
@@ -82,19 +82,19 @@ if (isset($_POST["submit"])) {
 
                 <div>
                     <label class="form-label" for="nama"> NAMA : </label>
-                    <input class="form-control" type="text" name="nama" id="nama" required value="<?= $murid["nama"]; ?>">
+                    <input class="form-control text-white" type="text" name="nama" id="nama" required value="<?= $murid["nama"]; ?>">
                 </div>
                 <div>
                     <label class="form-label" for="nisn"> NISN : </label>
-                    <input class="form-control" type="number" name="nisn" id="nisn" required value="<?= $murid["nisn"]; ?>">
+                    <input class="form-control text-white" type="number" name="nisn" id="nisn" required value="<?= $murid["nisn"]; ?>">
                 </div>
                 <div>
                     <label class="form-label" for="gender"> GENDER: </label>
-                    <input class="form-control" type="text" name="gender" id="gender" required value="<?= $murid["gender"]; ?>">
+                    <input class="form-control text-white" type="text" name="gender" id="gender" required value="<?= $murid["gender"]; ?>">
                 </div>
                 <div>
                     <label class="form-label" for="alamat"> ALAMAT : </label>
-                    <input class="form-control" type="textarea" name="alamat" id="alamat" required value="<?= $murid["alamat"]; ?>">
+                    <input class="form-control text-white" type="textarea" name="alamat" id="alamat" required value="<?= $murid["alamat"]; ?>">
                 </div>
                 <div>
                     <button type="submit" name="submit">Ubah Data</button>

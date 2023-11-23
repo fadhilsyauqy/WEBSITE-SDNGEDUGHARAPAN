@@ -110,4 +110,56 @@ function regis($data){
 }
 
 
+// KEGIATAN
+function tambah_kgt($data){
+    global $db;
+
+    //ambil data dari tiap elemen
+    $nama= htmlspecialchars($data["nama"]) ;
+    $nisn= htmlspecialchars( $data["nisn"]);
+    $gender= htmlspecialchars($data["gender"]) ;
+    $alamat= htmlspecialchars($data["alamat"]) ;
+
+    //query insert data
+    $query = "INSERT INTO siswa VALUES ('','$nama','$nisn','$gender','$alamat') ";
+    
+    mysqli_query($db, $query);
+
+    return mysqli_affected_rows($db);
+}
+
+function hapus_kgt($id){
+    global $db;
+    mysqli_query($db, "DELETE FROM siswa WHERE id = $id");
+    return mysqli_affected_rows($db);
+
+}
+
+
+function ubah_kgt($data){
+    global $db;
+    //ambil data dari tiap elemen
+    $id =  $data["id"];
+    $nama= htmlspecialchars($data["nama"]) ;
+    $nisn= htmlspecialchars( $data["nisn"]);
+    $gender= htmlspecialchars($data["gender"]) ;
+    $alamat= htmlspecialchars($data["alamat"]) ;
+
+    //query insert data
+    $query = "UPDATE siswa SET
+                nama = '$nama',
+                nisn = '$nisn',
+                gender = '$gender',
+                alamat = '$alamat'
+            WHERE id = $id
+            ";
+    
+    mysqli_query($db, $query);
+
+    return mysqli_affected_rows($db);
+
+}
+
+
+
 ?>

@@ -88,9 +88,6 @@ if (isset($_POST["cari"])) {
     </nav>
     <!-- akhir navbar -->
 
-
-
-
     <div class="container mt-3">
         <h1 class="text-start mb-3">Daftar Siswa </h1>
 

@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION["login"])) {
-    header("Location: edit.php");
+    header("Location: index.php");
     exit;
 }
 
@@ -28,7 +28,7 @@ if (isset($_POST["login"])) {
 
 
 
-            header("Location: edit.php");
+            header("Location: index.php");
             exit;
         }
     }

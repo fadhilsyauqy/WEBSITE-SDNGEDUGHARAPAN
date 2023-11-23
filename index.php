@@ -18,7 +18,7 @@
 <body>
 
     <!-- navbar -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
@@ -79,8 +79,10 @@
 
     <!-- Bg -->
     <div class="masthead" style="background-image: url(image/bgasli.jpg);">
-        <div class="color-overlay d-flex justify-content-center align-items-center">
-            <h1 class="animate__animated animate_fadeInUp">Selamat Datang</h1>
+        <div class="color-overlay d-flex flex-column justify-content-center align-items-center">
+            <p class="p-2" id="animateMe" style="font-size: 4vw; ">Selamat Datang</p>
+            <p class="p-2" id="animateMe" style="font-size: 2vw; ">Di Website </p>
+            <p class="p-3" id="animateMe" style="font-size: 3vw; ">SD N GEDUNG HARAPAN </p>
         </div>
     </div>
 
@@ -90,6 +92,8 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src='https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js'></script>
+    <script type="module" src="./script/text.js"></script>
 
 
 </body>

@@ -2,27 +2,27 @@
 session_start();
 
 if( !isset($_SESSION["login"])){
-    header("Location: login.php");
+    header("Location: ../admin/login.php");
     exit;
 }
 
 
-require 'functions.php';
+require '../admin/functions.php';
 
 $id = $_GET["id"];
 
-if(hapus($id) > 0){
+if(hapus_kgt($id) > 0){
     echo "
     <script>
         alert('DATA BERHASIL DIHAPUS');
-        document.location.href = 'edit.php'
+        document.location.href = '../set_kegiatan/index.php'
     </script>
     ";
 }else {
     echo "
     <script>
         alert('DATA GAGAL DIHAPUS');
-        document.location.href = 'edit.php'
+        document.location.href = '../set_kegiatan/index.php'
     </script>
     ";
 }
