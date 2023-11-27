@@ -37,3 +37,9 @@ h1 {
     letter-spacing: 0.8rem;
     font-weight: 900;
 }
+
+@media(max-width: 991px) {
+    .nav-item.ms-4 {
+        margin-left: 0 !important;
+    }
+}
