@@ -16,7 +16,12 @@
         .navbar {
             /* background-color: rgba(242, 247, 250, .5); */
             background-color: #14274E !important;
+        }
 
+        @media(max-width: 991px) {
+            .nav-item.ms-4 {
+                margin-left: 0 !important;
+            }
         }
     </style>
 
@@ -27,11 +32,11 @@
 <body>
 
     <!-- nav -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                SD N Gunung Harapan
+                SD N Gedung Harapan
             </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -84,13 +89,27 @@
         </div>
     </nav>
     <!-- akhir nav -->
-    
-    <h1 class="text-center m-5">VISI MISI</h1>
-
 
     <!-- ISi -->
+    <!-- main container -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <!-- login contianer -->
+        <div class="row border rounded-3 p-3 bg-white shadow-lg box-area">
+            <h1 class="text-center mb-5">VISI MISI</h1>
+            <h3 class="text-start">Visi</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorem aliquam asperiores maxime? Dicta corporis quam, repellendus aspernatur provident ipsa accusamus accusantium non fugit nisi dolorem nesciunt deserunt enim magni, cum voluptatibus. Ullam eligendi molestias sint libero id eveniet quae possimus porro laborum, praesentium saepe? Earum quisquam consectetur, officiis, tempore incidunt commodi rem accusamus maiores animi id delectus! Quisquam fuga, quis fugiat at officiis magnam libero itaque autem atque, hic maiores veniam unde magni iste odit perferendis doloremque asperiores obcaecati. Ullam ducimus consectetur, mollitia voluptas inventore cum vel iure aliquam praesentium suscipit neque hic totam, quod similique facere a est!</p>
+            <h3>Misi</h3>
+            <ol class="ms-4" type="I">
+                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, temporibus?</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione illo ut pariatur asperiores, veritatis sequi?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aspernatur velit omnis iure consequatur quae libero cum, corporis aut consequuntur repellat cupiditate praesentium aliquid repellendus.</li>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, iusto!</li>
+                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque cum possimus enim cupiditate porro deleniti soluta ut, numquam et rerum?</li>
+            </ol>
+        </div>
+    </div>
+    <!-- Akhir Isi -->
 
-    
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

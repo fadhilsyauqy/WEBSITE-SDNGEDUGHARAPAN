@@ -16,7 +16,12 @@
         .navbar {
             /* background-color: rgba(242, 247, 250, .5); */
             background-color: #14274E !important;
+        }
 
+        @media(max-width: 991px) {
+            .nav-item.ms-4 {
+                margin-left: 0 !important;
+            }
         }
     </style>
 
@@ -31,7 +36,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                SD N Gunung Harapan
+                SD N Gedung Harapan
             </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -84,13 +89,23 @@
         </div>
     </nav>
     <!-- akhir nav -->
-    
-    <h1 class="text-center m-5">Profil Sekolah</h1>
 
 
     <!-- ISi -->
+    <!-- ISi -->
+    <!-- main container -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <!-- login contianer -->
+        <div class="row border rounded-3 p-3 m-3 bg-white shadow-lg box-area">
+            <h1 class="text-center mb-3">Profil Sekolah</h1>
+            <img src="image/bg.jpg" class="img-fluid mb-3 rounded" alt="sekolah" style="height: 300px;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorem aliquam asperiores maxime? Dicta corporis quam, repellendus aspernatur provident ipsa accusamus accusantium non fugit nisi dolorem nesciunt deserunt enim magni, cum voluptatibus. Ullam eligendi molestias sint libero id eveniet quae possimus porro laborum, praesentium saepe? Earum quisquam consectetur, officiis, tempore incidunt commodi rem accusamus maiores animi id delectus! Quisquam fuga, quis fugiat at officiis magnam libero itaque autem atque, hic maiores veniam unde magni iste odit perferendis doloremque asperiores obcaecati. Ullam ducimus consectetur, mollitia voluptas inventore cum vel iure aliquam praesentium suscipit neque hic totam, quod similique facere a est!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium earum perspiciatis fugiat soluta ab. Expedita, perspiciatis sunt! Dolores magni est nisi veniam at, vitae consequuntur cupiditate velit vel. Reprehenderit aliquam aliquid modi vel doloribus, voluptas aspernatur cum, necessitatibus alias, id reiciendis nihil sequi ab esse nemo quod laboriosam beatae maiores cupiditate perferendis iste suscipit ipsa? Exercitationem facilis illo velit iure at doloribus sapiente in officiis delectus cumque voluptatibus suscipit dignissimos ex provident similique voluptatum possimus necessitatibus voluptas iusto, quam ullam cum fugiat tempora. Atque quasi eos tenetur reprehenderit deleniti modi totam explicabo dolorum provident expedita commodi non, doloremque possimus eum voluptatum mollitia eaque praesentium suscipit cumque fugiat quia ex blanditiis et velit! Id adipisci beatae unde iusto et animi non veritatis, voluptatibus consequuntur quidem eveniet pariatur officiis sed qui possimus, facere repudiandae doloribus cumque itaque sunt suscipit fugiat error alias aliquid! Reiciendis incidunt velit qui. Assumenda voluptates eius itaque dolor provident? Blanditiis laboriosam commodi iusto nobis ipsa odio cumque dolorem perspiciatis, voluptatum quo vel esse nihil aliquid laudantium ullam vero odit obcaecati aliquam quibusdam similique. Tempora perspiciatis rem debitis consequatur? Reiciendis praesentium quidem magni quo dolorem veritatis deserunt sapiente temporibus aperiam ea doloremque, at eius incidunt maiores nostrum unde deleniti!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste id aspernatur porro enim laudantium mollitia velit, explicabo deleniti repellendus magni odio quod ducimus similique fugit asperiores reiciendis? Recusandae minus corporis quisquam repellat reprehenderit nam debitis enim error ducimus autem quo ipsum reiciendis tenetur at ad accusamus, quidem omnis soluta sit provident pariatur odio dolores sunt tempora! Voluptate eligendi sint officia. Voluptates sunt similique tenetur nemo possimus, provident nisi adipisci eius iusto officia aspernatur sit doloremque dolorum doloribus animi veniam officiis quasi eum nulla at dolores accusamus laudantium itaque exercitationem. Nesciunt quos nobis quis suscipit adipisci cum officia et unde illum, voluptates aut impedit laborum consectetur? Illum accusamus, quos, cumque quod illo commodi deleniti officia quis deserunt rerum placeat obcaecati culpa quo sed blanditiis inventore a fugit facere reprehenderit sit quasi cupiditate. Odit, libero distinctio maxime, ut nam consequatur explicabo illo non temporibus voluptatum amet? Quam quidem quis ex odit hic?</p>
+        </div>
+    </div>
+    <!-- Akhir Isi -->
 
-    
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

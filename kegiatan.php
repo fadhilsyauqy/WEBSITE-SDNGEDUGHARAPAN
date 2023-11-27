@@ -1,3 +1,17 @@
+<?php
+require 'admin/functions.php';
+$siswa = query("SELECT * FROM siswa");
+
+
+//tombol cari ditekan
+if (isset($_POST["cari"])) {
+    $siswa = cari($_POST["keyword"]);
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +30,12 @@
         .navbar {
             /* background-color: rgba(242, 247, 250, .5); */
             background-color: #14274E !important;
+        }
 
+        @media(max-width: 991px) {
+            .nav-item.ms-4 {
+                margin-left: 0 !important;
+            }
         }
     </style>
 
@@ -31,7 +50,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                SD N Gunung Harapan
+                SD N Gedung Harapan
             </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

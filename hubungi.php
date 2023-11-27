@@ -16,7 +16,12 @@
         .navbar {
             /* background-color: rgba(242, 247, 250, .5); */
             background-color: #14274E !important;
+        }
 
+        @media(max-width: 991px) {
+            .nav-item.ms-4 {
+                margin-left: 0 !important;
+            }
         }
     </style>
 
@@ -31,7 +36,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                SD N Gunung Harapan
+                SD N Gedung Harapan
             </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -84,13 +89,25 @@
         </div>
     </nav>
     <!-- akhir nav -->
-    
-    <h1 class="text-center m-5">Hubungi Kami</h1>
-
 
     <!-- ISi -->
+    <!-- main container -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <!-- login contianer -->
+        <div class="row border rounded-3 p-3 bg-white shadow-lg box-area">
+            <h1 class="text-center mb-3">Hubungi Kami</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus reprehenderit dolorem illum quo illo fuga possimus! Error eius facere sit iste? Sunt fugiat placeat magnam expedita aspernatur numquam ipsa nobis. Repellat tenetur voluptatibus doloremque commodi laboriosam at quisquam aut, exercitationem deleniti, repellendus voluptatem? Vel adipisci nobis in numquam magnam omnis.</p>
 
-    
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5160855909085!2d105.35129237600034!3d-5.337885353479062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c3db5d33439d%3A0xdcef00172b75399d!2sSDN%20Gedung%20harapan!5e0!3m2!1sid!2sid!4v1700786241446!5m2!1sid!2sid" width="300" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+            
+        </div>
+
+    </div>
+    <!-- Akhir Isi -->
+
+
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
