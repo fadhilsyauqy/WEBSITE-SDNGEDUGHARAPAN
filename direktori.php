@@ -1,11 +1,11 @@
 <?php
 require 'admin/functions.php';
-$siswa = query("SELECT * FROM siswa");
+$guru = query("SELECT * FROM guru");
 
 
 //tombol cari ditekan
 if (isset($_POST["cari"])) {
-    $siswa = cari($_POST["keyword"]);
+    $guru = cari($_POST["keyword"]);
 }
 
 
@@ -22,6 +22,7 @@ if (isset($_POST["cari"])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style/tbsiswa.css">
+    <link rel="stylesheet" href="./style/dropdown.css">
 
     <title>Direktori </title>
 
@@ -89,7 +90,7 @@ if (isset($_POST["cari"])) {
     <!-- akhir navbar -->
 
     <div class="container mt-3">
-        <h1 class="text-start mb-3">Daftar Siswa </h1>
+        <h1 class="text-start mb-3">Daftar Guru </h1>
 
         <form action="" method="post" class="d-flex " role="search">
             <input class="form-control me-2" type="search" name="keyword" placeholder="Telusuri..." aria-label="Search" autocomplete="off">
@@ -101,19 +102,19 @@ if (isset($_POST["cari"])) {
             <tr>
                 <th>No.</th>
                 <th>Nama</th>
-                <th>NISN</th>
-                <th>Gender</th>
-                <th>Alamat</th>
+                <th>NIP</th>
+                <th>jabatan</th>
+                <th>gambar</th>
             </tr>
 
             <?php $i = 1; ?>
-            <?php foreach ($siswa as $row) : ?>
+            <?php foreach ($guru as $row) : ?>
                 <tr>
                     <td class="text-center fw-bold "><?= $i; ?></td>
                     <td><?= $row["nama"]; ?></td>
-                    <td><?= $row["nisn"]; ?></td>
-                    <td><?= $row["gender"]; ?></td>
-                    <td><?= $row["alamat"]; ?></td>
+                    <td><?= $row["nip"]; ?></td>
+                    <td><?= $row["jabatan"]; ?></td>
+                    <td><?= $row["gambar"]; ?></td>
 
                 </tr>
                 <?php $i++; ?>

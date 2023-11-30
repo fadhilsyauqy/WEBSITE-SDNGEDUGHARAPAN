@@ -10,6 +10,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/dropdown.css">
 
     <title>Home</title>
 
@@ -54,15 +55,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="hubungi.php">Hubungi Kami</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Direktori
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="datasiswa.php">Data Siswa</a></li>
-                                <li><a class="dropdown-item" href="#">Data Guru</a></li>
-                            </ul>
-                        </li> -->
                     <li class="nav-item ms-4">
                         <a class="nav-link" href="admin/login.php">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">

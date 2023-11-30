@@ -12,7 +12,7 @@ require '../admin/functions.php';
 $id = $_GET["id"];
 
 //query data mahasiswa berdasarkan id
-$murid = query("SELECT * FROM siswa WHERE id = $id")[0];
+$kgt = query("SELECT * FROM kegiatan WHERE id = $id")[0];
 
 
 //cek apakah tombol sudaah ditekan atau belum
@@ -49,7 +49,7 @@ if (isset($_POST["submit"])) {
     <!-- Bootsrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <title>ubah Data Siswa</title>
+    <title>ubah Data Kegiatan</title>
 
     <style>
         label {
@@ -59,7 +59,7 @@ if (isset($_POST["submit"])) {
         .form-control,
         .form-select {
             background: #14274E !important;
-            color: #fff
+            color: #fff !important;
         }
     </style>
 
@@ -71,33 +71,38 @@ if (isset($_POST["submit"])) {
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="row border rounded-3 p-1 bg-white shadow-lg box-area" style="border: 3px solid #14274E !important;">
 
-        
-        <form action="" method="post">
+
+            <form action="" method="post" enctype="multipart/form-data">
 
                 <h1 class="m-5 text-bold" style="color: #14274E;">Ubah Data Siswa</h1>
-            
-                <div>
-                    <input type="hidden" name="id" value="<?= $murid["id"]; ?>">
-                </div>
+
+                <input type="hidden" name="id" value="<?= $kgt["id"]; ?>">
+
+                <input type="hidden" name="gambarlama" value="<?= $kgt["gambar"]; ?>">
+
+                <input type="hidden" name="tautanlama" value="<?= $kgt["tautan"]; ?>">
 
                 <div>
-                    <label class="form-label" for="nama"> NAMA : </label>
-                    <input class="form-control" type="text" name="nama" id="nama" required value="<?= $murid["nama"]; ?>">
+                    <label class="form-label" for="judul"> JUDUL : </label>
+                    <input class="form-control text-white" type="text" name="judul" id="judul" required value="<?= $kgt["judul"]; ?>">
                 </div>
                 <div>
-                    <label class="form-label" for="nisn"> NISN : </label>
-                    <input class="form-control" type="number" name="nisn" id="nisn" required value="<?= $murid["nisn"]; ?>">
+                    <label class="form-label" for="deskripsi"> DESKRIPSI : </label>
+                    <textarea class="form-control text-white" type="text" name="deskripsi" id="deskripsi" required ><?= $kgt["deskripsi"]; ?></textarea>
                 </div>
-                <div>
-                    <label class="form-label" for="gender"> GENDER: </label>
-                    <input class="form-control" type="text" name="gender" id="gender" required value="<?= $murid["gender"]; ?>">
+                <div class="mb-2">
+                    <label class="form-label" for="tautan"> TAUTAN: </label>
+                    <input class="form-control text-white" type="file" name="tautan" id="tautan" >
                 </div>
-                <div>
-                    <label class="form-label" for="alamat"> ALAMAT : </label>
-                    <input class="form-control" type="textarea" name="alamat" id="alamat" required value="<?= $murid["alamat"]; ?>">
+                <div class="mb-3">
+                    <label class="form-label" for="gambar"> GAMBAR : </label>
+                    <br>
+                    <img src="../brt_kgt/image/<?= $kgt['gambar']; ?>" width="200" class="border border-dark">
+                    <br>
+                    <input class="form-control text-white mt-1" type="file" name="gambar" id="gambar" >
                 </div>
-                <div>
-                    <button type="submit" name="submit">Ubah Data</button>
+                <div class="d-grid z col-6 mx-auto mb-3">
+                    <button class="btn text-white" style="background: #14274E;" type="submit" name="submit">Ubah Data</button>
                 </div>
             </form>
         </div>

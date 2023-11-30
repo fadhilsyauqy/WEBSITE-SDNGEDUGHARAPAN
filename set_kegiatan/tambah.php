@@ -47,16 +47,15 @@ if (isset($_POST["submit"])) {
 
     <title>Tambah Data Siswa</title>
     <style>
-        label{
+        label {
             font-weight: 600;
         }
-        
-        .form-control,
-        .form-select{
-            background: #14274E !important;
-            color: #fff 
-        }
 
+        .form-control,
+        .form-select {
+            background: #14274E !important;
+            color: #fff
+        }
     </style>
 
 </head>
@@ -64,29 +63,25 @@ if (isset($_POST["submit"])) {
 <body>
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="row border rounded-3 p-1 bg-white shadow-lg box-area" style="border: 3px solid #14274E !important;">
-            <form action="" method="post">
-                <h1 class="m-5 text-bold" style="color: #14274E;">Tambah Data Siswa</h1>
+            <form action="" method="post" enctype="multipart/form-data">
+
+                <h1 class="m-5 text-bold" style="color: #14274E;">Tambah Kegiatan</h1>
+
                 <div class="mb-3">
-                    <label class="form-label" for="nama"> NAMA : </label>
-                    <input class="form-control text-white" type="text" name="nama" id="nama" required>
+                    <label class="form-label" for="judul"> JUDUL : </label>
+                    <input class="form-control text-white" type="text" name="judul" id="judul" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="nisn"> NISN : </label>
-                    <input class="form-control text-white" type="number" name="nisn" id="nisn" required>
+                    <label class="form-label" for="deskripsi"> DESKRIPSI : </label>
+                    <textarea class="form-control text-white" name="deskripsi" id="deskripsi" required></textarea>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="gender"> KELAMIN : </label>
-                    <select class="form-select text-white" aria-label="Default select " name="gender" id="gender" required>
-                        <option selected> </option>
-                        <option value="Laki-Laki">Laki-Laki</option>
-                        <option value="Perempuan">Perempuan</option>
-                    </select>
-                    <!-- <input class="form-control" type="text" name="gender" id="gender" required> -->
+                    <label class="form-label" for="tautan"> TAUTAN : </label>
+                    <input class="form-control text-white" type="file" name="tautan" id="tautan" required>
                 </div>
-                <div class="mb-5">
-                    <label class="form-label" for="alamat"> ALAMAT : </label>
-                    <textarea class="form-control text-white" name="alamat" id="alamat" rows="3" required></textarea>
-                    <!-- <input class="form-control" type="textarea" name="alamat" id="alamat" required> -->
+                <div class="mb-3">
+                    <label class="form-label" for="gambar"> GAMBAR : </label>
+                    <input class="form-control text-white" type="file" name="gambar" id="gambar">
                 </div>
                 <div class="d-grid z col-6 mx-auto mb-3">
                     <button class="btn text-white" style="background: #14274E;" type="submit" name="submit">Tambah Data</button>

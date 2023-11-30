@@ -23,6 +23,13 @@
                 margin-left: 0 !important;
             }
         }
+
+        @media(min-width: 991px) {
+            .dropdown:hover>.dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+        }
     </style>
 
 
@@ -67,15 +74,6 @@
                     <li class="nav-item">
                         <a class="nav-link active text-bold" href="hubungi.php">Hubungi Kami</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Direktori
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="datasiswa.php">Data Siswa</a></li>
-                                <li><a class="dropdown-item" href="#">Data Guru</a></li>
-                            </ul>
-                        </li> -->
                     <li class="nav-item ms-4">
                         <a class="nav-link" href="admin/login.php">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -101,7 +99,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5160855909085!2d105.35129237600034!3d-5.337885353479062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c3db5d33439d%3A0xdcef00172b75399d!2sSDN%20Gedung%20harapan!5e0!3m2!1sid!2sid!4v1700786241446!5m2!1sid!2sid" width="300" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
-            
+
         </div>
 
     </div>

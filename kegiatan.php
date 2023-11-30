@@ -1,11 +1,11 @@
 <?php
 require 'admin/functions.php';
-$siswa = query("SELECT * FROM siswa");
+$kegiatan = query("SELECT * FROM kegiatan");
 
 
 //tombol cari ditekan
 if (isset($_POST["cari"])) {
-    $siswa = cari($_POST["keyword"]);
+    $kegiatan = cari($_POST["keyword"]);
 }
 
 
@@ -35,6 +35,13 @@ if (isset($_POST["cari"])) {
         @media(max-width: 991px) {
             .nav-item.ms-4 {
                 margin-left: 0 !important;
+            }
+        }
+
+        @media(min-width: 991px) {
+            .dropdown:hover>.dropdown-menu {
+                display: block;
+                margin-top: 0;
             }
         }
     </style>
@@ -81,15 +88,6 @@ if (isset($_POST["cari"])) {
                     <li class="nav-item">
                         <a class="nav-link" href="hubungi.php">Hubungi Kami</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Direktori
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="datasiswa.php">Data Siswa</a></li>
-                                <li><a class="dropdown-item" href="#">Data Guru</a></li>
-                            </ul>
-                        </li> -->
                     <li class="nav-item ms-4">
                         <a class="nav-link" href="admin/login.php">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -105,45 +103,19 @@ if (isset($_POST["cari"])) {
     <!-- akhir nav -->
 
     <!-- card -->
-    <div class="container p-5">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col ">
-                <div class="card h-100 shadow">
-                    <img src="..." class="card-img-top" alt="...">
+    <div class="container p-5 ">
+        <?php foreach ($kegiatan as $row) : ?>
+            <a href="brt_kgt/tautan/<?= $row["tautan"] ?>" class="text-decoration-none">
+                <div class="card mb-3">
+                    <img src="brt_kgt/image/<?= $row["gambar"];  ?>" class="card-img-top" alt="<?= $row["gambar"];  ?>" >
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title"><?= $row["judul"]; ?></h5>
+                        <p class="card-text"><?= $row["deskripsi"]; ?></p>
+                        <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 shadow">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a short card.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 shadow">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 shadow">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </a>
+        <?php endforeach; ?>
     </div>
 
 
