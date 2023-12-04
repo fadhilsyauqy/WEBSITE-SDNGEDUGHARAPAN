@@ -56,7 +56,7 @@ if (isset($_POST["cari"])) {
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="image/logo.png" alt="LOGO" height="30" class="d-inline-block align-text-top">
                 SD N Gedung Harapan
             </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -74,8 +74,8 @@ if (isset($_POST["cari"])) {
                             Profil
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="visimisi.php">Visi Misi</a></li>
-                            <li><a class="dropdown-item" href="">Profil Sekolah</a></li>
+                            <li><a class="dropdown-item" href="index.php#visimisi">Visi Misi</a></li>
+                            <li><a class="dropdown-item" href="index.php#profil">Profil Sekolah</a></li>
                             <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                         </ul>
                     </li>
@@ -104,18 +104,22 @@ if (isset($_POST["cari"])) {
 
     <!-- card -->
     <div class="container p-5 ">
-        <?php foreach ($kegiatan as $row) : ?>
-            <a href="brt_kgt/tautan/<?= $row["tautan"] ?>" class="text-decoration-none">
-                <div class="card mb-3">
-                    <img src="brt_kgt/image/<?= $row["gambar"];  ?>" class="card-img-top" alt="<?= $row["gambar"];  ?>" >
-                    <div class="card-body">
-                        <h5 class="card-title"><?= $row["judul"]; ?></h5>
-                        <p class="card-text"><?= $row["deskripsi"]; ?></p>
-                        <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <?php foreach ($kegiatan as $row) : ?>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="brt_kgt/image/<?= $row["gambar"];  ?>" class="card-img-top " alt="Kegiatan">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $row["judul"]; ?></h5>
+                            <p class="card-text">T<?= $row["deskripsi"]; ?></p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <a href="brt_kgt/tautan/<?= $row["tautan"] ?>" class="btn  btn-outline-primary ">Selengkapnya</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </a>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
     </div>
 
 

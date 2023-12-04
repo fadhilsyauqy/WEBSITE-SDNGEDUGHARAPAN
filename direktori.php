@@ -24,6 +24,12 @@ if (isset($_POST["cari"])) {
     <link rel="stylesheet" href="style/tbsiswa.css">
     <link rel="stylesheet" href="./style/dropdown.css">
 
+    <style>
+        .card-text {
+            list-style-type: none;
+        }
+    </style>
+
     <title>Direktori </title>
 
 </head>
@@ -34,7 +40,7 @@ if (isset($_POST["cari"])) {
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="image/logo.png" alt="LOGO" height="30" class="d-inline-block align-text-top">
                 SD N Gedung Harapan
             </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,17 +50,13 @@ if (isset($_POST["cari"])) {
                     <li class="nav-item">
                         <a class="nav-link  text-bold" aria-current="page" href="index.php">Home</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Profil Sekolah</a>
-                    </li> -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Profil
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="visimisi.php">Visi Misi</a></li>
-                            <li><a class="dropdown-item" href="profil.php">Profil Sekolah</a></li>
-                            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                            <li><a class="dropdown-item" href="index.php#visimisi">Visi Misi</a></li>
+                            <li><a class="dropdown-item" href="index.php#profil">Profil Sekolah</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -66,15 +68,6 @@ if (isset($_POST["cari"])) {
                     <li class="nav-item">
                         <a class="nav-link" href="hubungi.php">Hubungi Kami</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Direktori
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="datasiswa.php">Data Siswa</a></li>
-                                <li><a class="dropdown-item" href="#">Data Guru</a></li>
-                            </ul>
-                        </li> -->
                     <li class="nav-item ms-4">
                         <a class="nav-link" href="admin/login.php">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -89,37 +82,43 @@ if (isset($_POST["cari"])) {
     </nav>
     <!-- akhir navbar -->
 
-    <div class="container mt-3">
-        <h1 class="text-start mb-3">Daftar Guru </h1>
+    <div class="container mt-3 ">
 
-        <form action="" method="post" class="d-flex " role="search">
-            <input class="form-control me-2" type="search" name="keyword" placeholder="Telusuri..." aria-label="Search" autocomplete="off">
-            <button class="btn btn-success" name="cari" type="submit">Telusuri</button>
-        </form>
+        <section>
+            <div class="container">
+                <h1 class="text-start mb-3">Daftar Guru </h1>
+                <form action="" method="post" class="row mb-3 " role="search" style="width: 40% !important;">
+                    <input class=" col form-control me-2 " type="search" name="keyword" placeholder="Telusuri..." aria-label="Search" autocomplete="off">
+                    <button class="col-3 btn btn-success" name="cari" type="submit">Telusuri</button>
+                </form>
+            </div>
+        </section>
 
-        <table border="2" class="table table-responsive table-hover shadow rounded-4 mx-auto m-3 rounded-3">
 
-            <tr>
-                <th>No.</th>
-                <th>Nama</th>
-                <th>NIP</th>
-                <th>jabatan</th>
-                <th>gambar</th>
-            </tr>
-
-            <?php $i = 1; ?>
+        <div class="row">
             <?php foreach ($guru as $row) : ?>
-                <tr>
-                    <td class="text-center fw-bold "><?= $i; ?></td>
-                    <td><?= $row["nama"]; ?></td>
-                    <td><?= $row["nip"]; ?></td>
-                    <td><?= $row["jabatan"]; ?></td>
-                    <td><?= $row["gambar"]; ?></td>
-
-                </tr>
-                <?php $i++; ?>
+                <div class="col-sm-6 mb-3 mb-sm-0 ">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img  src="guru/image/<?= $row["foto"];  ?>" class="img-fluid rounded-start" alt="guru">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?= $row["nama"]; ?></h5>
+                                    <p class="card-text ">
+                                    <ul class="list-unstyled">
+                                        <li><b>NIP : </b><?= $row["nip"]; ?> </li>
+                                        <li><b>Jabatan : </b> <?= $row["jabatan"]; ?> </li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             <?php endforeach; ?>
-        </table>
+        </div>
 
     </div>
 

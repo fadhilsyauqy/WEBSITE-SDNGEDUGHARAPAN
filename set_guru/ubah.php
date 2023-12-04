@@ -71,33 +71,37 @@ if (isset($_POST["submit"])) {
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="row border rounded-3 p-1 bg-white shadow-lg box-area" style="border: 3px solid #14274E !important;">
 
-        
-        <form action="" method="post">
+
+            <form action="" method="post" enctype="multipart/form-data">
 
                 <h1 class="m-5 text-bold" style="color: #14274E;">Ubah Data Guru</h1>
-            
-                <div>
-                    <input type="hidden" name="id" value="<?= $gr["id"]; ?>">
-                </div>
+
+
+                <input type="hidden" name="id" value="<?= $gr["id"]; ?>">
+
+                <input type="hidden" name="fotolama" value="<?= $gr["foto"]; ?>">
 
                 <div>
                     <label class="form-label" for="nama"> NAMA : </label>
                     <input class="form-control text-white" type="text" name="nama" id="nama" required value="<?= $gr["nama"]; ?>">
                 </div>
                 <div>
-                    <label class="form-label" for="nisn"> NISN : </label>
-                    <input class="form-control text-white" type="number" name="nisn" id="nisn" required value="<?= $gr["nisn"]; ?>">
+                    <label class="form-label" for="nip"> NIP: </label>
+                    <input class="form-control text-white" type="text" name="nip" id="nip" required value="<?= $gr["nip"]; ?>">
                 </div>
                 <div>
-                    <label class="form-label" for="gender"> GENDER: </label>
-                    <input class="form-control text-white" type="text" name="gender" id="gender" required value="<?= $gr["gender"]; ?>">
+                    <label class="form-label" for="jabatan"> JABATAN: </label>
+                    <input class="form-control text-white" type="text" name="jabatan" id="jabatan" required value="<?= $gr["jabatan"]; ?>">
                 </div>
-                <div>
-                    <label class="form-label" for="alamat"> ALAMAT : </label>
-                    <input class="form-control text-white" type="textarea" name="alamat" id="alamat" required value="<?= $gr["alamat"]; ?>">
+                <div class="mb-3">
+                    <label class="form-label" for="foto"> FOTO : </label>
+                    <div class="mb-2">
+                        <img src="../guru/image/<?= $gr['foto']; ?>" width="100" class="border border-dark">
+                    </div>
+                    <input class="form-control text-white" type="file" name="foto" id="foto">
                 </div>
-                <div>
-                    <button type="submit" name="submit">Ubah Data</button>
+                <div class="d-grid z col-6 mx-auto mb-3">
+                    <button class="btn text-white" style="background: #14274E;" type="submit" name="submit">Ubah Data</button>
                 </div>
             </form>
         </div>

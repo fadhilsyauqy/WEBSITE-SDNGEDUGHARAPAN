@@ -8,7 +8,7 @@ if (!isset($_SESSION["login"])) {
 
 
 require 'functions.php';
-$guru = query("SELECT * FROM guru");
+
 
 
 ?>

@@ -64,7 +64,7 @@ if (isset($_POST["submit"])) {
 <body>
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="row border rounded-3 p-1 bg-white shadow-lg box-area" style="border: 3px solid #14274E !important;">
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 <h1 class="m-5 text-bold" style="color: #14274E;">Tambah Data Siswa</h1>
                 <div class="mb-3">
                     <label class="form-label" for="nama"> NAMA : </label>
@@ -72,24 +72,16 @@ if (isset($_POST["submit"])) {
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="nip"> NIP : </label>
-                    <input class="form-control text-white" type="number" name="nip" id="nip" required>
+                    <input class="form-control text-white" type="text" name="nip" id="nip" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="jabatan"> JABATAN : </label>
                     <input class="form-control text-white" type="text" name="jabatan" id="jabatan" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="gambar"> GAMBAR : </label>
-                    <input class="form-control text-white" type="text" name="gambar" id="gambar" required>
+                    <label class="form-label" for="foto"> FOTO : </label>
+                    <input class="form-control text-white" type="file" name="foto" id="foto">
                 </div>
-                <!-- <div class="mb-3">
-                    <label class="form-label" for="gender"> KELAMIN : </label>
-                    <select class="form-select text-white" aria-label="Default select " name="gender" id="gender" required>
-                        <option selected> </option>
-                        <option value="Laki-Laki">Laki-Laki</option>
-                        <option value="Perempuan">Perempuan</option>
-                    </select>
-                </div> -->
             
                 <div class="d-grid z col-6 mx-auto mb-3">
                     <button class="btn text-white" style="background: #14274E;" type="submit" name="submit">Tambah Data</button>

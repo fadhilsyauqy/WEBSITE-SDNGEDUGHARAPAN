@@ -133,10 +133,6 @@ if (isset($_POST["cari"])) {
             <button class="btn btn-success" name="cari" type="submit">Telusuri</button>
         </form>
 
-        <!-- <form action="" method="post" class="d-flex justify-content-start">
-            <input type="text" name="keyword" size="50" autofocus placeholder="Telusuri.." autocomplete="off">
-            <button class="ms-2" type="submit" name="cari">CARI</button>
-        </form> -->
 
         <table border="2" class=" table table-responsive table-striped shadow-lg table-hover mx-auto m-3 rounded-3" style="font-weight:400">
 
@@ -145,7 +141,7 @@ if (isset($_POST["cari"])) {
                 <th>Nama</th>
                 <th>NIP</th>
                 <th>Jabatan</th>
-                <th>Gambar</th>
+                <th>Foto</th>
                 <th>Aksi</th>
             </tr>
 
@@ -157,7 +153,7 @@ if (isset($_POST["cari"])) {
                     <td><?= $row["nama"]; ?></td>
                     <td><?= $row["nip"]; ?></td>
                     <td><?= $row["jabatan"]; ?></td>
-                    <td><img src="../guru/image/<?= $row["gambar"]; ?>"></td>
+                    <td class="text-center"><img src="../guru/image/<?= $row["foto"]; ?>" width="100"></td>
 
                     <td class="text-center">
                         <button type="button" class="btn btn-warning ">

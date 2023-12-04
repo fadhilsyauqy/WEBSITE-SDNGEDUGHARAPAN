@@ -24,45 +24,44 @@ function tambah($data)
     $jabatan = htmlspecialchars($data["jabatan"]);
 
     //upload gambar
-    $gambar = upload_gambarGuru();
-    if (!$gambar) {
+    $foto = upload_foto();
+    if (!$foto) {
         return false;
     }
 
 
     //query insert data
-    $query = "INSERT INTO guru VALUES ('','$nama','$nip','$jabatan','$gambar') ";
+    $query = "INSERT INTO guru VALUES ('','$nama','$nip','$jabatan','$foto') ";
 
     mysqli_query($db, $query);
 
     return mysqli_affected_rows($db);
 }
 
-function upload_gambarGuru()
+function upload_foto()
 {
 
-    $namaFile = $_FILES['gambar']['name'];
-    $ukuranFile = $_FILES['gambar']['size'];
-    $error = $_FILES['gambar']['error'];
-    $tmpName = $_FILES['gambar']['tmp_name'];
+    $namaFile = $_FILES['foto']['name'];
+    $ukuranFile = $_FILES['foto']['size'];
+    $error = $_FILES['foto']['error'];
+    $tmpName = $_FILES['foto']['tmp_name'];
 
-    //cek gambar
+    //cek foto
     if ($error === 4) {
         echo "<script>
-                alert('Pilih Gambar Terlebih Dahulu');
+                alert('Pilih foto Terlebih Dahulu');
             </script>";
         return false;
     }
 
-    // cek gambar atau tidak
+    // cek foto atau tidak
+    $exstensiFotoValid = ['jpg', 'jpeg', 'png'];
+    $exstensiFoto = explode('.', $namaFile);
+    $exstensiFoto = strtolower(end($exstensiFoto));
 
-    $exstensiGambarValid = ['jpg', 'jpeg', 'png'];
-    $exstensiGambar = explode('.', $namaFile);
-    $exstensiGambar = strtolower(end($exstensiGambar));
-
-    if (!in_array($exstensiGambar, $exstensiGambarValid)) {
+    if (!in_array($exstensiFoto, $exstensiFotoValid)) {
         echo "<script>
-                alert('Yang anda upload bukan gambar');
+                alert('Yang anda upload bukan foto');
             </script>";
         return false;
     }
@@ -70,7 +69,7 @@ function upload_gambarGuru()
     //cek ukuran file
     if ($ukuranFile > 1000000) {
         echo "<script>
-                alert('Ukuran gambar terlalu besar');
+                alert('Ukuran foto terlalu besar');
             </script>";
         return false;
     }
@@ -79,7 +78,7 @@ function upload_gambarGuru()
     //generate nama baru
     $namaFileBaru = uniqid();
     $namaFileBaru .= '.';
-    $namaFileBaru .= $exstensiGambar;
+    $namaFileBaru .= $exstensiFoto;
 
 
 
@@ -104,13 +103,13 @@ function ubah($data)
     $nama = htmlspecialchars($data["nama"]);
     $nip = htmlspecialchars($data["nip"]);
     $jabatan = htmlspecialchars($data["jabatan"]);
-    $gambarlama = htmlspecialchars($data["gambarlama"]);
+    $fotolama = htmlspecialchars($data["fotolama"]);
 
-    //cek pilih gambar baru
-    if ($_FILES['gambar']['error'] === 4) {
-        $gambar = $gambarlama;
+    //cek pilih foto baru
+    if ($_FILES['foto']['error'] === 4) {
+        $foto = $fotolama;
     } else {
-        $gambar = upload_gambarGuru();
+        $foto = upload_foto();
     }
 
 
@@ -120,7 +119,7 @@ function ubah($data)
                 nama = '$nama',
                 nip = '$nip',
                 jabatan = '$jabatan',
-                gambar = '$gambar'
+                foto = '$foto'
             WHERE id = $id
             ";
 
@@ -136,7 +135,7 @@ function cari($keyword)
             nama LIKE '%$keyword%' OR
             nip LIKE '%$keyword%' OR
             jabatan LIKE '%$keyword%'OR
-            gambar LIKE '%$keyword%'
+            foto LIKE '%$keyword%'
         ";
     return query($query);
 }
