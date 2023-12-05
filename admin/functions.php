@@ -187,22 +187,14 @@ function tambah_kgt($data)
     //ambil data dari tiap elemen
     $judul = htmlspecialchars($data["judul"]);
     $deskripsi = htmlspecialchars($data["deskripsi"]);
-    $tautan = htmlspecialchars($data["tautan"]);
-
     //upload gambar
     $gambar = upload_gambar();
     if (!$gambar) {
         return false;
     }
 
-    //upload file
-    $tautan = upload_file();
-    if (!$tautan) {
-        return false;
-    }
-
     //query insert data
-    $query = "INSERT INTO kegiatan VALUES ('','$judul','$deskripsi','$tautan','$gambar') ";
+    $query = "INSERT INTO kegiatan VALUES ('','$judul','$deskripsi','$gambar') ";
 
     mysqli_query($db, $query);
 
@@ -260,56 +252,6 @@ function upload_gambar()
 }
 
 
-function upload_file()
-{
-
-    $namaFile = $_FILES['tautan']['name'];
-    $ukuranFile = $_FILES['tautan']['size'];
-    $error = $_FILES['tautan']['error'];
-    $tmpName = $_FILES['tautan']['tmp_name'];
-
-    //cek gambar
-    if ($error === 4) {
-        echo "<script>
-                alert('Pilih File Terlebih Dahulu');
-            </script>";
-        return false;
-    }
-
-    // cek gambar atau tidak
-
-    $exstensiTautanValid = ['html', 'php'];
-    $exstensiTautan = explode('.', $namaFile);
-    $exstensiTautan = strtolower(end($exstensiTautan));
-
-    if (!in_array($exstensiTautan, $exstensiTautanValid)) {
-        echo "<script>
-                alert('Yang anda upload bukan Tautan');
-            </script>";
-        return false;
-    }
-
-    //cek ukuran file
-    if ($ukuranFile > 1000000) {
-        echo "<script>
-                alert('Ukuran Tautan terlalu besar');
-            </script>";
-        return false;
-    }
-
-    //siap upload
-    //generate nama baru
-    $namaFileBaru = uniqid();
-    $namaFileBaru .= '.';
-    $namaFileBaru .= $exstensiTautan;
-
-
-
-    move_uploaded_file($tmpName, '../brt_kgt/tautan/' . $namaFileBaru);
-
-    return $namaFileBaru;
-}
-
 
 function hapus_kgt($id)
 {
@@ -326,7 +268,6 @@ function ubah_kgt($data)
     $id =  $data["id"];
     $judul = htmlspecialchars($data["judul"]);
     $deskripsi = htmlspecialchars($data["deskripsi"]);
-    $tautanlama = htmlspecialchars($data["tautanlama"]);
     $gambarlama = htmlspecialchars($data["gambarlama"]);
 
     //cek pilih gambar baru
@@ -336,18 +277,10 @@ function ubah_kgt($data)
         $gambar = upload_gambar();
     }
 
-    //cek pilih tautan baru
-    if ($_FILES['tautan']['error'] === 4) {
-        $tautan = $tautanlama;
-    } else {
-        $tautan = upload_file();
-    }
-
     //query insert data
     $query = "UPDATE kegiatan SET
                 judul = '$judul',
                 deskripsi = '$deskripsi',
-                tautan = '$tautan',
                 gambar = '$gambar'
             WHERE id = $id
             ";

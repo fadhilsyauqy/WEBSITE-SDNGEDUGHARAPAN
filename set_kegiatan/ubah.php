@@ -80,7 +80,6 @@ if (isset($_POST["submit"])) {
 
                 <input type="hidden" name="gambarlama" value="<?= $kgt["gambar"]; ?>">
 
-                <input type="hidden" name="tautanlama" value="<?= $kgt["tautan"]; ?>">
 
                 <div>
                     <label class="form-label" for="judul"> JUDUL : </label>
@@ -89,10 +88,6 @@ if (isset($_POST["submit"])) {
                 <div>
                     <label class="form-label" for="deskripsi"> DESKRIPSI : </label>
                     <textarea class="form-control text-white" type="text" name="deskripsi" id="deskripsi" required ><?= $kgt["deskripsi"]; ?></textarea>
-                </div>
-                <div class="mb-2">
-                    <label class="form-label" for="tautan"> TAUTAN: </label>
-                    <input class="form-control text-white" type="file" name="tautan" id="tautan" >
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="gambar"> GAMBAR : </label>

@@ -76,10 +76,6 @@ if (isset($_POST["submit"])) {
                     <textarea class="form-control text-white" name="deskripsi" id="deskripsi" required></textarea>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="tautan"> TAUTAN : </label>
-                    <input class="form-control text-white" type="file" name="tautan" id="tautan" required>
-                </div>
-                <div class="mb-3">
                     <label class="form-label" for="gambar"> GAMBAR : </label>
                     <input class="form-control text-white" type="file" name="gambar" id="gambar">
                 </div>

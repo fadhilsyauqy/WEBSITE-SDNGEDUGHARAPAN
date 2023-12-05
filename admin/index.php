@@ -9,7 +9,11 @@ if (!isset($_SESSION["login"])) {
 
 require 'functions.php';
 
+$gr = query("SELECT COUNT(*) as TOTAL FROM guru");
+$TOTALguru = $gr[0]["TOTAL"];
 
+$kgt = query("SELECT COUNT(*) as JMLH FROM kegiatan");
+$JMLHkgt = $kgt[0]["JMLH"];
 
 ?>
 
@@ -121,6 +125,58 @@ require 'functions.php';
 
     <h1 class="text-center ">SELAMAT DATANG</h1>
 
+    <div class="container ">
+        <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+            <div class="card m-3 bg-success bg-gradient" style="max-width:35rem; min-height:20rem">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-size: 50px;">JUMLAH GURU</h5>
+                            <h1 class="text-end" style="font-size: 100px;"><?= $TOTALguru ?></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card m-3 bg-info bg-gradient" style="max-width:35rem; min-height:20rem">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title mb-5" style="font-size: 60px;">KEGIATAN</h5>
+                            <h1 class="text-end" style="font-size: 100px;"><?= $JMLHkgt ?></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card m-3" style="max-width:35rem; min-height:20rem">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="..." class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card m-3" style="max-width:35rem; min-height:20rem">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="..." class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

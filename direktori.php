@@ -89,7 +89,7 @@ if (isset($_POST["cari"])) {
                 <h1 class="text-start mb-3">Daftar Guru </h1>
                 <form action="" method="post" class="row mb-3 " role="search" style="width: 40% !important;">
                     <input class=" col form-control me-2 " type="search" name="keyword" placeholder="Telusuri..." aria-label="Search" autocomplete="off">
-                    <button class="col-3 btn btn-success" name="cari" type="submit">Telusuri</button>
+                    <button class="col-3 btn btn-outline-success" name="cari" type="submit">Telusuri</button>
                 </form>
             </div>
         </section>
@@ -98,7 +98,7 @@ if (isset($_POST["cari"])) {
         <div class="row">
             <?php foreach ($guru as $row) : ?>
                 <div class="col-sm-6 mb-3 mb-sm-0 ">
-                    <div class="card mb-3" style="max-width: 540px;">
+                    <div class="card mb-3" style="max-width: 540px; border: 3px solid  #14274E">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img  src="guru/image/<?= $row["foto"];  ?>" class="img-fluid rounded-start" alt="guru">

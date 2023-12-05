@@ -103,24 +103,38 @@ if (isset($_POST["cari"])) {
     <!-- akhir nav -->
 
     <!-- card -->
-    <div class="container p-5 ">
+    <!-- card -->
+    <div class="container p-5">
         <div class="row row-cols-1 row-cols-md-2 g-4">
-            <?php foreach ($kegiatan as $row) : ?>
+            <?php foreach ($kegiatan as $index => $row) : ?>
                 <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="brt_kgt/image/<?= $row["gambar"];  ?>" class="card-img-top " alt="Kegiatan">
+                    <div class="card shadow-sm p-3">
+                        <img src="brt_kgt/image/<?= $row["gambar"]; ?>" class="card-img-top " alt="Kegiatan">
                         <div class="card-body">
                             <h5 class="card-title"><?= $row["judul"]; ?></h5>
-                            <p class="card-text">T<?= $row["deskripsi"]; ?></p>
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <a href="brt_kgt/tautan/<?= $row["tautan"] ?>" class="btn  btn-outline-primary ">Selengkapnya</a>
+                            <div class="d-grid gap-2 d-md-block mb-1 text-end">
+                                <button class="btn btn-outline-primary btn-sm " type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index; ?>" aria-expanded="false" aria-controls="collapse<?= $index; ?>">
+                                    Selengkapnya
+                                </button>
                             </div>
+                            <div class="collapse mb-1" id="collapse<?= $index; ?>">
+                                <div class="card card-body">
+                                    <p class="card-text"><?= $row["deskripsi"]; ?></p>
+                                </div>
+                            </div>
+                            <p class="card-text"><small class="text-body-secondary">
+                                    
+
+
+                                </small></p>
+
                         </div>
                     </div>
                 </div>
             <?php endforeach; ?>
         </div>
     </div>
+
 
 
     <!--akhir card  -->
