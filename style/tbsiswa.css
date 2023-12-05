@@ -29,7 +29,7 @@ td {
 
 
 .form-control {
-    border: 4px solid #14274E;
+    border: 1px solid #14274E;
 }
 
 h1 {
@@ -41,5 +41,6 @@ h1 {
 @media(max-width: 991px) {
     .nav-item.ms-4 {
         margin-left: 0 !important;
+        color: rgb(17, 33, 65)
     }
 }
