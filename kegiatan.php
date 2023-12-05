@@ -103,41 +103,91 @@ if (isset($_POST["cari"])) {
     <!-- akhir nav -->
 
     <!-- card -->
-    <!-- card -->
-    <div class="container p-5">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <?php foreach ($kegiatan as $index => $row) : ?>
-                <div class="col">
-                    <div class="card shadow-sm p-3">
-                        <img src="brt_kgt/image/<?= $row["gambar"]; ?>" class="card-img-top " alt="Kegiatan">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $row["judul"]; ?></h5>
-                            <div class="d-grid gap-2 d-md-block mb-1 text-end">
-                                <button class="btn btn-outline-primary btn-sm " type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index; ?>" aria-expanded="false" aria-controls="collapse<?= $index; ?>">
-                                    Selengkapnya
-                                </button>
-                            </div>
-                            <div class="collapse mb-1" id="collapse<?= $index; ?>">
-                                <div class="card card-body">
-                                    <p class="card-text"><?= $row["deskripsi"]; ?></p>
+    <section>
+        <div class="container p-3 min-vh-100">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <?php foreach ($kegiatan as $index => $row) : ?>
+                    <div class="col">
+                        <div class="card shadow-sm p-3">
+                            <img src="brt_kgt/image/<?= $row["gambar"]; ?>" class="card-img-top " alt="Kegiatan">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $row["judul"]; ?></h5>
+                                <div class="d-grid gap-2 d-md-block mb-1 text-end">
+                                    <button class="btn btn-outline-primary btn-sm " type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index; ?>" aria-expanded="false" aria-controls="collapse<?= $index; ?>">
+                                        Selengkapnya
+                                    </button>
                                 </div>
+                                <div class="collapse mb-1" id="collapse<?= $index; ?>">
+                                    <div class="card card-body">
+                                        <p class="card-text"><?= $row["deskripsi"]; ?></p>
+                                    </div>
+                                </div>
+                                <p class="card-text"><small class="text-body-secondary">
+
+
+
+                                    </small></p>
+
                             </div>
-                            <p class="card-text"><small class="text-body-secondary">
-                                    
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    <!-- akhir card -->
 
+    <footer class="text-white pe-3 ps-1" style="background-color:rgba(17, 33, 65) ;">
+        <div class="containeR  text-md-left">
+            <div class="row  text-md-left">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-info">SD N GEDUNG HARAPAN</h5>
+                    <hr class="mb-4">
+                    <p>Selamat datang di situs web SD N Gedung Harapan! Melalui situs ini, kami bertujuan untuk menyediakan informasi dan memfasilitasi komunikasi yang efisien antara warga sekolah, alumni, masyarakat, dan berbagai instansi terkait.
+                </div>
 
-                                </small></p>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-info">USEFUL LINKS</h5>
+                    <hr class="mb-4">
+                    <p>
+                        <a href="index.php" class="text-white" style="text-decoration: none;">HOME</a>
+                    </p>
+                    <p>
+                        <a href="kegiatan.php" class="text-white" style="text-decoration: none;">KEGIATAN</a>
+                    </p>
+                    <p>
+                        <a href="hubungi.php" class="text-white" style="text-decoration: none;">HUBUNGI KAMI</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-info">CONTACT US</h5>
+                    <hr class="mb-4">
+                    <p>
+                        Gedung Harapan, Kec. Jati Agung
+                        Kab.Lampung Selatan
+                    </p> 
+                    <p><strong>Phone : </strong>+6285658773240</p>
+                    <p><strong>Postal code : </strong>34761</p>
+                    <p><strong>Email : </strong>sdngedungharapan@gmail.com</p>
+                </div>
 
+                <div class="text-center " style="background-color: #14274E;">
+                    <hr class="mb-3">
+                    <div class="row d-flex justify-content-center">
+                        <div>
+                            <p>
+                                Copyright &copy; 2023 <b>SD N Gedung Harapan</b> . All rights reserved.
+                            </p>
                         </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
+
+            </div>
         </div>
-    </div>
+    </footer>
 
 
 
-    <!--akhir card  -->
 
 
 

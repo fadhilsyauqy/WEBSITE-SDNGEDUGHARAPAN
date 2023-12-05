@@ -250,7 +250,7 @@ function upload_gambar()
 
     return $namaFileBaru;
 }
-
+    
 
 
 function hapus_kgt($id)

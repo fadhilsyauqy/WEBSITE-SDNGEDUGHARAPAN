@@ -82,23 +82,27 @@ if (isset($_POST["cari"])) {
     </nav>
     <!-- akhir navbar -->
 
-    <div class="container mt-3 ">
+    <div class="container mt-3 min-vh-100">
 
         <section>
             <div class="container">
-                <h1 class="text-start mb-3">Daftar Guru </h1>
-                <form action="" method="post" class="row mb-3 " role="search" style="width: 40% !important;">
-                    <input class=" col form-control me-2 " type="search" name="keyword" placeholder="Telusuri..." aria-label="Search" autocomplete="off">
-                    <button class="col-3 btn btn-outline-success" name="cari" type="submit">Telusuri</button>
-                </form>
+                <div class="row">
+                    <h1 class="col-md-6 text-start">Daftar Guru </h1>
+                    <div class="col-md-6 text-end ">
+                        <form action="" method="post" class="row mb-3 " role="search" style="width: 80% !important;">
+                            <input class=" col form-control me-2 " type="search" name="keyword" placeholder="Telusuri..." aria-label="Search" autocomplete="off">
+                            <button class="col-3 btn btn-outline-success " name="cari" type="submit">Telusuri</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
 
 
-        <div class="row">
+        <div class="row mt-3 ">
             <?php foreach ($guru as $row) : ?>
-                <div class="col-sm-6 mb-3 mb-sm-0 ">
-                    <div class="card mb-3" style="max-width: 540px; border: 3px solid  #14274E">
+                <div class="col-sm-4 mb-3 mb-sm-0 ">
+                    <div class="card mb-3" style="max-width: 6000px; border: 3px solid  #14274E">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img  src="guru/image/<?= $row["foto"];  ?>" class="img-fluid rounded-start" alt="guru">
@@ -119,8 +123,56 @@ if (isset($_POST["cari"])) {
                 </div>
             <?php endforeach; ?>
         </div>
-
     </div>
+
+    <footer class="text-white pe-3 ps-1 " style="background-color:rgba(17, 33, 65) ;">
+        <div class="containeR  text-md-left">
+            <div class="row  text-md-left">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-info">SD N GEDUNG HARAPAN</h5>
+                    <hr class="mb-4">
+                    <p>Selamat datang di situs web SD N Gedung Harapan! Melalui situs ini, kami bertujuan untuk menyediakan informasi dan memfasilitasi komunikasi yang efisien antara warga sekolah, alumni, masyarakat, dan berbagai instansi terkait.
+                </div>
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-info">USEFUL LINKS</h5>
+                    <hr class="mb-4">
+                    <p>
+                        <a href="index.php" class="text-white" style="text-decoration: none;">HOME</a>
+                    </p>
+                    <p>
+                        <a href="kegiatan.php" class="text-white" style="text-decoration: none;">KEGIATAN</a>
+                    </p>
+                    <p>
+                        <a href="hubungi.php" class="text-white" style="text-decoration: none;">HUBUNGI KAMI</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-info">CONTACT US</h5>
+                    <hr class="mb-4">
+                    <p>
+                        Gedung Harapan, Kec. Jati Agung
+                        Kab.Lampung Selatan
+                    </p>
+                    <p><strong>Phone : </strong>+6285658773240</p>
+                    <p><strong>Postal code : </strong>34761</p>
+                    <p><strong>Email : </strong>sdngedungharapan@gmail.com</p>
+                </div>
+
+                <div class="text-center " style="background-color: #14274E;">
+                    <hr class="mb-3">
+                    <div class="row d-flex justify-content-center">
+                        <div>
+                            <p>
+                                Copyright &copy; 2023 <b>SD N Gedung Harapan</b> . All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
