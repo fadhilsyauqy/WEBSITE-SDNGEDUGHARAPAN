@@ -130,7 +130,7 @@ $JMLHkgt = $kgt[0]["JMLH"];
     <div class="container d-flex justify-content-center align-items-center mt-2">
         <div class="row border rounded-3 ps-5 pe-5 bg-white shadow-lg box-area" style="border: 3px solid #14274E !important;">
             <form action="" method="post" enctype="multipart/form-data">
-                <h1 class="m-5 text-bold" style="color: #14274E;">Tambah Data Siswa</h1>
+                <h1 class="m-5 text-bold" style="color: #14274E;">TAMBAH DATA GURU</h1>
                 <div class="mb-3">
                     <label class="form-label" for="nama"> NAMA : </label>
                     <input class="form-control text-white" type="text" name="nama" id="nama" required>
