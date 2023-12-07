@@ -53,7 +53,9 @@ if (isset($_POST["login"])) {
     <link rel="stylesheet" href="../style/login.css">
 
 
-    <title>Login</title>
+    <title>SD N Gedung Harapan </title>
+    <link rel="icon" href="../image/logo.png">
+
 </head>
 
 <body>

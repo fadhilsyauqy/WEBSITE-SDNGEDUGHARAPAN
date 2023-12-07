@@ -37,7 +37,9 @@
     </style>
 
 
-    <title>Hubungi</title>
+    <title>SD N Gedung Harapan </title>
+    <link rel="icon" href="image/logo.png">
+
 </head>
 
 <body>

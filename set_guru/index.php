@@ -30,7 +30,9 @@ if (isset($_POST["cari"])) {
 
     <link rel="stylesheet" href="../style/edtsiswa.css">
 
-    <title>Edit</title>
+    <title>SD N Gedung Harapan </title>
+    <link rel="icon" href="../image/logo.png">">
+
 </head>
 
 <body>

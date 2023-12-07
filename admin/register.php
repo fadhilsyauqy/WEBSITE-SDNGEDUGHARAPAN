@@ -32,7 +32,8 @@ if (isset($_POST["register"])) {
     <!-- CSS -->
     <link rel="stylesheet" href="../style/login.css">
 
-    <title>Register</title>
+    <title>SD N Gedung Harapan </title>
+    <link rel="icon" href="../image/logo.png">
 
 </head>
 

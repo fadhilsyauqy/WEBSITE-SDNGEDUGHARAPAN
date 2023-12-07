@@ -29,7 +29,9 @@ $JMLHkgt = $kgt[0]["JMLH"];
 
     <link rel="stylesheet" href="../style/edtsiswa.css">
 
-    <title>Halaman Utama</title>
+    <title>SD N Gedung Harapan </title>
+    <link rel="icon" href="../image/logo.png">
+
 </head>
 
 <body>

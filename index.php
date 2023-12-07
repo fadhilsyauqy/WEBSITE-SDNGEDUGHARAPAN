@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/dropdown.css">
 
-    <title>Home</title>
+    <title>SD N Gedung Harapan </title>
+    <link rel="icon" href="image/logo.png">
 
 </head>
 
@@ -114,9 +115,24 @@
             <div class="row border rounded-3 bg-white p-1  shadow box-area">
                 <h1 class="text-center">Profil Sekolah</h1>
                 <img src="image/bg.jpg" class="img-fluid mb-3 rounded" alt="sekolah" style="height: 300px;">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorem aliquam asperiores maxime? Dicta corporis quam, repellendus aspernatur provident ipsa accusamus accusantium non fugit nisi dolorem nesciunt deserunt enim magni, cum voluptatibus. Ullam eligendi molestias sint libero id eveniet quae possimus porro laborum, praesentium saepe? Earum quisquam consectetur, officiis, tempore incidunt commodi rem accusamus maiores animi id delectus! Quisquam fuga, quis fugiat at officiis magnam libero itaque autem atque, hic maiores veniam unde magni iste odit perferendis doloremque asperiores obcaecati. Ullam ducimus consectetur, mollitia voluptas inventore cum vel iure aliquam praesentium suscipit neque hic totam, quod similique facere a est!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium earum perspiciatis fugiat soluta ab. Expedita, perspiciatis sunt! Dolores magni est nisi veniam at, vitae consequuntur cupiditate velit vel. Reprehenderit aliquam aliquid modi vel doloribus, voluptas aspernatur cum, necessitatibus alias, id reiciendis nihil sequi ab esse nemo quod laboriosam beatae maiores cupiditate perferendis iste suscipit ipsa? Exercitationem facilis illo velit iure at doloribus sapiente in officiis delectus cumque voluptatibus suscipit dignissimos ex provident similique voluptatum possimus necessitatibus voluptas iusto, quam ullam cum fugiat tempora. Atque quasi eos tenetur reprehenderit deleniti modi totam explicabo dolorum provident expedita commodi non, doloremque possimus eum voluptatum mollitia eaque praesentium suscipit cumque fugiat quia ex blanditiis et velit! Id adipisci beatae unde iusto et animi non veritatis, voluptatibus consequuntur quidem eveniet pariatur officiis sed qui possimus, facere repudiandae doloribus cumque itaque sunt suscipit fugiat error alias aliquid! Reiciendis incidunt velit qui. Assumenda voluptates eius itaque dolor provident? Blanditiis laboriosam commodi iusto nobis ipsa odio cumque dolorem perspiciatis, voluptatum quo vel esse nihil aliquid laudantium ullam vero odit obcaecati aliquam quibusdam similique. Tempora perspiciatis rem debitis consequatur? Reiciendis praesentium quidem magni quo dolorem veritatis deserunt sapiente temporibus aperiam ea doloremque, at eius incidunt maiores nostrum unde deleniti!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste id aspernatur porro enim laudantium mollitia velit, explicabo deleniti repellendus magni odio quod ducimus similique fugit asperiores reiciendis? Recusandae minus corporis quisquam repellat reprehenderit nam debitis enim error ducimus autem quo ipsum reiciendis tenetur at ad accusamus, quidem omnis soluta sit provident pariatur odio dolores sunt tempora! Voluptate eligendi sint officia. Voluptates sunt similique tenetur nemo possimus, provident nisi adipisci eius iusto officia aspernatur sit doloremque dolorum doloribus animi veniam officiis quasi eum nulla at dolores accusamus laudantium itaque exercitationem. Nesciunt quos nobis quis suscipit adipisci cum officia et unde illum, voluptates aut impedit laborum consectetur? Illum accusamus, quos, cumque quod illo commodi deleniti officia quis deserunt rerum placeat obcaecati culpa quo sed blanditiis inventore a fugit facere reprehenderit sit quasi cupiditate. Odit, libero distinctio maxime, ut nam consequatur explicabo illo non temporibus voluptatum amet? Quam quidem quis ex odit hic?</p>
+                <p>
+                SDN Gedung Harapan merupakan lembaga pendidikan dasar yang berdedikasi untuk memberikan pendidikan berkualitas dan memberdayakan setiap siswa untuk mencapai potensi maksimal mereka. Terletak di Desa Gedung Harapan, Gedung Harapan, Kec. Jati Agung, Kab. Lampung Selatan, Provinsi Lampung, sekolah ini menawarkan lingkungan belajar yang aman, nyaman, dan inspiratif bagi para siswa.
+                </p>
+                <p>
+                Komitmen untuk kualitas terwujud melalui penggunaan Kurikulum 2013 dan Kurikulum Merdeka yang disarankan pemerintah sebagai pedoman pendidikan. Dengan status akreditasi grade B dan nilai 86 dari BAN-S/M (Badan Akreditasi Nasional) Sekolah/Madrasah pada tahun 2021, SDN Gedung Harapan terus berupaya menjaga standar kualitas pendidikan yang tinggi.
+                </p>
+                <p>
+                Proses penerimaan siswa baru (PPDB) serta informasi terkait biaya masuk dan uang muka pendaftaran dapat diperoleh dengan menghubungi sekolah melalui email di gedungharapans@gmail.com.
+                </p>
+                <p>
+                Fasilitas yang disediakan meliputi akses internet dengan layanan Telkom Speedy, sumber listrik dari PLN, dan 6 ruang kelas yang mendukung proses belajar mengajar. Terdapat juga 1 perpustakaan yang memfasilitasi akses literasi bagi siswa. Meskipun belum memiliki laboratorium IPA, laboratorium bahasa, laboratorium komputer, dan laboratorium IPS, SDN Gedung Harapan tetap memberikan pendidikan yang optimal dengan sarana yang tersedia.
+                </p>
+                <p>
+                Sarana sanitasi juga diperhatikan dengan adanya 2 toilet untuk guru dan 2 toilet untuk siswa, menunjukkan perhatian terhadap kesejahteraan dan kebersihan lingkungan belajar.
+                </p>
+                <p>
+                SDN Gedung Harapan berkomitmen untuk terus memberikan pendidikan yang bermutu serta membentuk lingkungan belajar yang mendukung pertumbuhan dan perkembangan optimal setiap siswanya.
+                </p>
             </div>
         </div>
     </section>

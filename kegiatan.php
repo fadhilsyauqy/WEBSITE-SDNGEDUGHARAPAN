@@ -47,7 +47,10 @@ if (isset($_POST["cari"])) {
     </style>
 
 
-    <title>Kegiatan</title>
+    <title>SD N Gedung Harapan </title>
+    <link rel="icon" href="image/logo.png">
+
+
 </head>
 
 <body>
@@ -165,7 +168,7 @@ if (isset($_POST["cari"])) {
                     <p>
                         Gedung Harapan, Kec. Jati Agung
                         Kab.Lampung Selatan
-                    </p> 
+                    </p>
                     <p><strong>Phone : </strong>+6285658773240</p>
                     <p><strong>Postal code : </strong>34761</p>
                     <p><strong>Email : </strong>sdngedungharapan@gmail.com</p>

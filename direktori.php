@@ -30,7 +30,8 @@ if (isset($_POST["cari"])) {
         }
     </style>
 
-    <title>Direktori </title>
+    <title>SD N Gedung Harapan </title>
+    <link rel="icon" href="image/logo.png">
 
 </head>
 
