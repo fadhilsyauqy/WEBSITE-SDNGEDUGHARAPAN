@@ -38,7 +38,7 @@
 
 
     <title>SD N Gedung Harapan </title>
-    <link rel="icon" href="image/logo.png">
+    <link rel="icon" href="assets/image/logo.png">
 
 </head>
 
@@ -48,7 +48,7 @@
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="image/logo.png" alt="LOGO" height="30" class="d-inline-block align-text-top">
+                <img src="assets/image/logo.png" alt="LOGO" height="30" class="d-inline-block align-text-top">
                 SD N Gedung Harapan
             </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

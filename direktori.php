@@ -24,15 +24,15 @@ if (isset($_POST["cari"])) {
     <link rel="stylesheet" href="style/tbsiswa.css">
     <link rel="stylesheet" href="./style/dropdown.css">
 
+
+    <title>SD N Gedung Harapan </title>
+    <link rel="icon" href="assets/image/logo.png">
+    
     <style>
         .card-text {
             list-style-type: none;
         }
     </style>
-
-    <title>SD N Gedung Harapan </title>
-    <link rel="icon" href="image/logo.png">
-
 </head>
 
 <body>
@@ -41,7 +41,7 @@ if (isset($_POST["cari"])) {
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="image/logo.png" alt="LOGO" height="30" class="d-inline-block align-text-top">
+                <img src="assets/image/logo.png" alt="LOGO" height="30" class="d-inline-block align-text-top">
                 SD N Gedung Harapan
             </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -106,7 +106,7 @@ if (isset($_POST["cari"])) {
                     <div class="card mb-3" style="max-width: 6000px; border: 3px solid  #14274E">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img  src="guru/image/<?= $row["foto"];  ?>" class="img-fluid rounded-start" alt="guru">
+                                <img src="guru/image/<?= $row["foto"];  ?>" class="img-fluid rounded-start" alt="guru">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">

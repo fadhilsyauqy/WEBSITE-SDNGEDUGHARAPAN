@@ -54,7 +54,7 @@ if (isset($_POST["login"])) {
 
 
     <title>SD N Gedung Harapan </title>
-    <link rel="icon" href="../image/logo.png">
+    <link rel="icon" href="../assets/image/logo.png">
 
 </head>
 
@@ -81,7 +81,7 @@ if (isset($_POST["login"])) {
             <div class="col-md-6 rounded-start  d-flex justify-content-center align-items-center flex-column left-box " style="background: #14274E;">
                 <p class="fs-2 text-md-center pt-4 text-white " style="font-weight:700">W E L C O M E</p>
                 <div class="featured-img pb-2">
-                    <img src="../image/login.png" class="image-fluid" style="width: 25rem;">
+                    <img src="../assets/image/login.png" class="image-fluid" style="width: 25rem;">
                 </div>
                 <a href="../index.php" class="mb-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
@@ -94,7 +94,7 @@ if (isset($_POST["login"])) {
             <div class="col-md-6 p-5 right-box">
                 <form action="" method="post" class="row align-items-center">
                     <div class="featured-img d-flex align-items-center justify-content-center pt-4">
-                        <img src="../image/login2.png" class="image-fluid" style="width: 10rem;">
+                        <img src="../assets/image/login2.png" class="image-fluid" style="width: 10rem;">
                     </div>
                     <p class="fs-2 text-md-center pt-2 " style="color: #14274E; font-weight:700;">L O G I N</p>
                     <div class="mb-3">

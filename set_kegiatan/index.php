@@ -28,7 +28,7 @@ $kegiatan = query("SELECT * FROM kegiatan");
     <link rel="stylesheet" href="../style/edtsiswa.css">
     
     <title>SD N Gedung Harapan </title>
-    <link rel="icon" href="../image/logo.png">
+    <link rel="icon" href="../assets/image/logo.png">
 
 </head>
 
