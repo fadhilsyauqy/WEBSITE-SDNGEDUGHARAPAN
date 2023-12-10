@@ -11,7 +11,6 @@ require '../admin/functions.php';
 //ambil data  di url
 $id = $_GET["id"];
 
-//query data mahasiswa berdasarkan id
 $gr = query("SELECT * FROM guru WHERE id = $id")[0];
 
 

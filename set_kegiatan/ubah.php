@@ -76,7 +76,7 @@ if (isset($_POST["submit"])) {
 
             <form action="" method="post" enctype="multipart/form-data">
 
-                <h1 class="m-5 text-bold" style="color: #14274E;">Ubah Data Siswa</h1>
+                <h1 class="m-5 text-bold" style="color: #14274E;">Ubah Data Guru</h1>
 
                 <input type="hidden" name="id" value="<?= $kgt["id"]; ?>">
 
