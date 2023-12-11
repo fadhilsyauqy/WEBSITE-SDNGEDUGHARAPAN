@@ -11,6 +11,12 @@ if (isset($_GET['kategori']) && !empty($_GET['kategori'])) {
     header("Location: kegiatan.php");
     exit();
 }
+
+
+//tombol cari ditekan
+if (isset($_POST["cari"])) {
+    $kegiatan = cari_kgt($_POST["keyword"]);
+}
 ?>
 
 <!DOCTYPE html>
@@ -143,7 +149,7 @@ if (isset($_GET['kategori']) && !empty($_GET['kategori'])) {
                             <h2>Telusuri</h2>
                             <form action="" method="post" class="row mb-3 p-3" role="search" ">
                                 <input class=" col form-control me-2 " type=" search" name="keyword" placeholder="Telusuri..." aria-label="Search" autocomplete="off">
-                                <button class="col-3 btn btn-outline-success " name="cari" type="submit">Telusuri</button>
+                                <button class="col-3 btn btn-outline-success " id="tombol-cari" name="cari" type="submit">Telusuri</button>
                             </form>
                             <h2>Kategori</h2>
                             <ul class="list-group list-group-flush ">
@@ -220,7 +226,8 @@ if (isset($_GET['kategori']) && !empty($_GET['kategori'])) {
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script type="module" src="assets/script/kategori.js"></script>
+    <script src="assets/script/jquery-3.7.1.min.js"></script>
+    <script src="assets/script/idx-kgt.js"></script>
 
 
 

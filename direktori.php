@@ -100,39 +100,40 @@ if (isset($_POST["cari"])) {
                 <div class="row">
                     <h1 class="col-md-6 text-start">Daftar Guru </h1>
                     <div class="col-md-6 text-end ">
-                        <form action="" method="post" class="row mb-3 " role="search" style="width: 80% !important;">
-                            <input class=" col form-control me-2 " type="search" name="keyword" placeholder="Telusuri..." aria-label="Search" autocomplete="off">
-                            <button class="col-3 btn btn-outline-success " name="cari" type="submit">Telusuri</button>
+                        <form action="" method="post" class="row mt-2 " role="search" >
+                            <input class=" col form-control me-2 " type="search" name="keyword" id="keyword" placeholder="Telusuri..." aria-label="Search" autocomplete="off">
+                            <button class=" col-1 btn btn-outline-success " name="cari" type="submit" id="tombol-cari"></button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <div class="row mt-3 ">
-            <?php foreach ($guru as $row) : ?>
-                <div class="col-sm-4 mb-5 mb-sm-0 my-3 ">
-                    <div class="card h-100 " style="border: 3px solid  #14274E">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="guru/image/<?= $row["foto"];  ?>" class="img-fluid rounded-start" alt="guru">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?= $row["nama"]; ?></h5>
-                                    <p class="card-text ">
-                                    <ul class="list-unstyled">
-                                        <li><b>NIP : </b><?= $row["nip"]; ?> </li>
-                                        <li><b>Jabatan : </b> <?= $row["jabatan"]; ?> </li>
-                                    </ul>
-                                    </p>
+        <div id="container">
+            <div class="row mt-3 ">
+                <?php foreach ($guru as $row) : ?>
+                    <div class="col-lg-4 mb-5 mb-sm-0 my-3 ">
+                        <div class="card h-100 " style="border: 3px solid  #14274E">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="guru/image/<?= $row["foto"];  ?>" class="img-fluid rounded-start" alt="guru">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?= $row["nama"]; ?></h5>
+                                        <p class="card-text ">
+                                        <ul class="list-unstyled">
+                                            <li><b>NIP : </b><?= $row["nip"]; ?> </li>
+                                            <li><b>Jabatan : </b> <?= $row["jabatan"]; ?> </li>
+                                        </ul>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
         </div>
 
         <!-- Pagination -->
@@ -217,6 +218,8 @@ if (isset($_POST["cari"])) {
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/script/jquery-3.7.1.min.js"></script>
+    <script src="assets/script/idx-guru.js"></script>
 
 
 </body>

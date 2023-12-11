@@ -297,8 +297,7 @@ function cari_kgt($keyword)
 {
     $query = "SELECT * FROM kegiatan
                 WHERE
-            judul LIKE '%$keyword%' OR
-            kategori LIKE '%$keyword%'
+            judul LIKE '%$keyword%'
         ";
     return query($query);
 }
