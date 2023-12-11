@@ -58,9 +58,6 @@
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="index.php">Home</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Profil Sekolah</a>
-                    </li> -->
                     <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Profil
@@ -68,7 +65,6 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="index.php#visimisi">Visi Misi</a></li>
                             <li><a class="dropdown-item" href="index.php#profil">Profil Sekolah</a></li>
-                            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -100,7 +96,7 @@
         <!-- login contianer -->
         <div class="row border rounded-3 p-3 bg-white shadow-lg box-area">
             <h1 class="text-center mb-3">Hubungi Kami</h1>
-            <p class="mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus reprehenderit dolorem illum quo illo fuga possimus! Error eius facere sit iste? Sunt fugiat placeat magnam expedita aspernatur numquam ipsa nobis. Repellat tenetur voluptatibus doloremque commodi laboriosam at quisquam aut, exercitationem deleniti, repellendus voluptatem? Vel adipisci nobis in numquam magnam omnis.</p>
+            <p class="mt-3">Jika Anda memiliki pertanyaan atau saran, silakan hubungi kami melalui kontak yang tersedia di bawah ini</p>
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5160855909085!2d105.35129237600034!3d-5.337885353479062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c3db5d33439d%3A0xdcef00172b75399d!2sSDN%20Gedung%20harapan!5e0!3m2!1sid!2sid!4v1700786241446!5m2!1sid!2sid" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 

@@ -48,7 +48,7 @@ if (isset($_POST["submit"])) {
 
     <!-- Bootsrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
+
     <title>SD N Gedung Harapan </title>
     <link rel="icon" href="../assets/image/logo.png">
 
@@ -89,14 +89,25 @@ if (isset($_POST["submit"])) {
                 </div>
                 <div>
                     <label class="form-label" for="deskripsi"> DESKRIPSI : </label>
-                    <textarea class="form-control text-white" type="text" name="deskripsi" id="deskripsi" required ><?= $kgt["deskripsi"]; ?></textarea>
+                    <textarea class="form-control text-white" type="text" name="deskripsi" id="deskripsi" required><?= $kgt["deskripsi"]; ?></textarea>
                 </div>
+                <div class="mb-3">
+                    <label class="form-label" for="kategori"> KATEGORI : </label>
+                    <select class="form-select" name="kategori" id="kategori" required>
+                        <option value="" <?= ($kgt["kategori"] === "") ? 'selected' : ''; ?>></option>
+                        <option value="Kegiatan" <?= ($kgt["kategori"] === "Kegiatan") ? 'selected' : ''; ?>>Kegiatan Sekolah</option>
+                        <option value="Pendidikan" <?= ($kgt["kategori"] === "Pendidikan") ? 'selected' : ''; ?>>Pendidikan</option>
+                        <option value="Prestasi" <?= ($kgt["kategori"] === "Prestasi") ? 'selected' : ''; ?>>Prestasi</option>
+                        <option value="Informasi" <?= ($kgt["kategori"] === "Informasi") ? 'selected' : ''; ?>>Informasi</option>
+                    </select>
+                </div>
+
                 <div class="mb-3">
                     <label class="form-label" for="gambar"> GAMBAR : </label>
                     <br>
                     <img src="../brt_kgt/image/<?= $kgt['gambar']; ?>" width="200" class="border border-dark">
                     <br>
-                    <input class="form-control text-white mt-1" type="file" name="gambar" id="gambar" >
+                    <input class="form-control text-white mt-1" type="file" name="gambar" id="gambar">
                 </div>
                 <div class="d-grid z col-6 mx-auto mb-3">
                     <button class="btn text-white" style="background: #14274E;" type="submit" name="submit">Ubah Data</button>

@@ -129,11 +129,11 @@ $JMLHkgt = $kgt[0]["JMLH"];
     </div>
     <!-- akhir card -->
 
-    <div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="container d-flex justify-content-center align-items-center mt-3">
         <div class="row border rounded-3 ps-5 pe-5  bg-white shadow-lg box-area" style="border: 3px solid #14274E !important;">
             <form action="" method="post" enctype="multipart/form-data">
 
-                <h1 class="m-5 text-bold" style="color: #14274E;">KEGIATAN</h1>
+                <h1 class="m-4 text-bold" style="color: #14274E;">KEGIATAN</h1>
 
                 <div class="mb-3">
                     <label class="form-label" for="judul"> JUDUL : </label>
@@ -142,6 +142,16 @@ $JMLHkgt = $kgt[0]["JMLH"];
                 <div class="mb-3">
                     <label class="form-label" for="deskripsi"> DESKRIPSI : </label>
                     <textarea class="form-control text-white" name="deskripsi" id="deskripsi" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="kategori"> KATEGORI : </label>
+                    <select class="form-select" name="kategori" id="kategori">
+                        <option selected></option>
+                        <option value="Kegiatan">Kegiatan Sekolah</option>
+                        <option value="Pendidikan">Pendidikan</option>
+                        <option value="Prestasi">Prestasi</option>
+                        <option value="Informasi">Informasi</option>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="gambar"> GAMBAR : </label>

@@ -187,6 +187,7 @@ function tambah_kgt($data)
     //ambil data dari tiap elemen
     $judul = htmlspecialchars($data["judul"]);
     $deskripsi = htmlspecialchars($data["deskripsi"]);
+    $kategori = htmlspecialchars($data["kategori"]);
     //upload gambar
     $gambar = upload_gambar();
     if (!$gambar) {
@@ -194,7 +195,7 @@ function tambah_kgt($data)
     }
 
     //query insert data
-    $query = "INSERT INTO kegiatan VALUES ('','$judul','$deskripsi','$gambar') ";
+    $query = "INSERT INTO kegiatan VALUES ('','$judul','$deskripsi','$kategori','$gambar') ";
 
     mysqli_query($db, $query);
 
@@ -268,6 +269,7 @@ function ubah_kgt($data)
     $id =  $data["id"];
     $judul = htmlspecialchars($data["judul"]);
     $deskripsi = htmlspecialchars($data["deskripsi"]);
+    $kategori = htmlspecialchars($data["kategori"]);
     $gambarlama = htmlspecialchars($data["gambarlama"]);
 
     //cek pilih gambar baru
@@ -281,6 +283,7 @@ function ubah_kgt($data)
     $query = "UPDATE kegiatan SET
                 judul = '$judul',
                 deskripsi = '$deskripsi',
+                kategori = '$kategori',
                 gambar = '$gambar'
             WHERE id = $id
             ";
@@ -288,4 +291,14 @@ function ubah_kgt($data)
     mysqli_query($db, $query);
 
     return mysqli_affected_rows($db);
+}
+
+function cari_kgt($keyword)
+{
+    $query = "SELECT * FROM kegiatan
+                WHERE
+            judul LIKE '%$keyword%' OR
+            kategori LIKE '%$keyword%'
+        ";
+    return query($query);
 }

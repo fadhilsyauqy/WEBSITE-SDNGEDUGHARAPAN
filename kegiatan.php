@@ -1,11 +1,11 @@
 <?php
 require 'admin/functions.php';
-$kegiatan = query("SELECT * FROM kegiatan");
+$kegiatan = query("SELECT * FROM kegiatan ORDER BY id DESC");
 
 
 //tombol cari ditekan
 if (isset($_POST["cari"])) {
-    $kegiatan = cari($_POST["keyword"]);
+    $kegiatan = cari_kgt($_POST["keyword"]);
 }
 
 
@@ -69,9 +69,6 @@ if (isset($_POST["cari"])) {
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="index.php">Home</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Profil Sekolah</a>
-                    </li> -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Profil
@@ -108,37 +105,61 @@ if (isset($_POST["cari"])) {
     <!-- card -->
     <section>
         <div class="container p-3 min-vh-100">
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <?php foreach ($kegiatan as $index => $row) : ?>
-                    <div class="col">
-                        <div class="card shadow-sm p-3">
-                            <img src="brt_kgt/image/<?= $row["gambar"]; ?>" class="card-img-top " alt="Kegiatan">
-                            <div class="card-body">
-                                <h5 class="card-title"><?= $row["judul"]; ?></h5>
-                                <div class="d-grid gap-2 d-md-block mb-1 text-end">
-                                    <button class="btn btn-outline-primary btn-sm " type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index; ?>" aria-expanded="false" aria-controls="collapse<?= $index; ?>">
-                                        Selengkapnya
-                                    </button>
-                                </div>
-                                <div class="collapse mb-1" id="collapse<?= $index; ?>">
-                                    <div class="card card-body">
-                                        <p class="card-text"><?= $row["deskripsi"]; ?></p>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row row-cols-1 g-4">
+                        <?php foreach ($kegiatan as $index => $row) : ?>
+                            <div class="col">
+                                <div class="card shadow-sm p-3">
+                                    <img src="brt_kgt/image/<?= $row["gambar"]; ?>" class="card-img-top" alt="Kegiatan">
+                                    <div class="card-body">
+                                        <h3 class="card-title"><?= $row["judul"]; ?></h3>
+                                        <p class="card-text"><small class="text-body-secondary"><?= $row["kategori"]  ?></small></p>
+                                        <div class="d-grid gap-2 d-md-block mb-1 text-end">
+                                            <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index; ?>" aria-expanded="false" aria-controls="collapse<?= $index; ?>">
+                                                Selengkapnya
+                                            </button>
+                                        </div>
+                                        <div class="collapse mb-1" id="collapse<?= $index; ?>">
+                                            <div class="card card-body">
+                                                <p class="card-text"><?= $row["deskripsi"]; ?></p>
+                                            </div>
+                                        </div>
                                     </div>
+
                                 </div>
-                                <p class="card-text"><small class="text-body-secondary">
-
-
-
-                                    </small></p>
-
                             </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <!-- Sidebar -->
+                <div class="col-md-4 ">
+                    <div class="card sidebar-card shadow">
+                        <div class="card-body">
+                            <!-- Isi Sidebar -->
+                            <h2>Telusuri</h2>
+                            <form action="" method="post" class="row mb-3 p-3" role="search" ">
+                                <input class=" col form-control me-2 " type=" search" name="keyword" placeholder="Telusuri..." aria-label="Search" autocomplete="off">
+                                <button class="col-3 btn btn-outline-success " name="cari" type="submit">Telusuri</button>
+                            </form>
+                            <h2>Kategori</h2>
+                            <ul class="list-group list-group-flush ">
+                                <li class="list-group-item"><a class="text-decoration-none text-dark" href="filter_kgt.php?kategori=Kegiatan">Kegiatan Sekolah</a></li>
+                                <li class="list-group-item"><a class="text-decoration-none text-dark" href="filter_kgt.php?kategori=Pendidikan">Pendidikan</a></li>
+                                <li class="list-group-item"><a class="text-decoration-none text-dark" href="filter_kgt.php?kategori=Prestasi">Prestasi</a></li>
+                                <li class="list-group-item"><a class="text-decoration-none text-dark" href="filter_kgt.php?kategori=Informasi">Informasi</a></li>
+
+                            </ul>
+
                         </div>
                     </div>
-                <?php endforeach; ?>
+                </div>
             </div>
         </div>
     </section>
     <!-- akhir card -->
+
+
 
     <footer class="text-white pe-3 ps-1" style="background-color:rgba(17, 33, 65) ;">
         <div class="containeR  text-md-left">
@@ -196,6 +217,7 @@ if (isset($_POST["cari"])) {
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="module" src="assets/script/kategori.js"></script>
 
 
 

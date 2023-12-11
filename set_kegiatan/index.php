@@ -113,6 +113,7 @@ $kegiatan = query("SELECT * FROM kegiatan");
                 <th class="text-center ">No.</th>
                 <th>Judul</th>
                 <th>Deskripsi</th>
+                <th>Kategori</th>
                 <th>Gambar</th>
                 <th>Aksi</th>
             </tr>
@@ -124,6 +125,7 @@ $kegiatan = query("SELECT * FROM kegiatan");
                     <td class="text-center fw-bold "><?= $i; ?></td>
                     <td><?= $row["judul"]; ?></td>
                     <td><?= $row["deskripsi"]; ?></td>
+                    <td><?= $row["kategori"]; ?></td>
                     <td><img src="../brt_kgt/image/<?= $row["gambar"]; ?>" width="200"> </td>
 
                     <td class="text-center ">
