@@ -69,7 +69,7 @@
     </nav>
 
     <!-- Bg -->
-    <div class="masthead min-vh-100" style="background-image: url(assets/image/bgasli.jpg);">
+    <div class="masthead min-vh-100 " style="background-image: url(assets/image/bgasli.jpg);">
         <div class="color-overlay d-flex flex-column justify-content-center align-items-center">
             <p id="animateMe" style="font-size: 4vw; ">Selamat Datang</p>
             <p id="animateMe" style="font-size: 1.5vw; color:gold ">di website </p>
@@ -80,10 +80,10 @@
     <!-- akhir bg -->
 
     <!-- visi misi  -->
-    <section id="visimisi" class="min-vh-100" style="margin-bottom: -1rem;"> 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <section id="visimisi" class="min-vh-90  " style="margin-top:15%; margin-bottom: 10%;" > 
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#14274E" fill-opacity="1" d="M0,64L34.3,69.3C68.6,75,137,85,206,85.3C274.3,85,343,75,411,80C480,85,549,107,617,128C685.7,149,754,171,823,149.3C891.4,128,960,64,1029,48C1097.1,32,1166,64,1234,64C1302.9,64,1371,32,1406,16L1440,0L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
-        </svg>
+        </svg> -->
         <div class="container">
             <div class="row border rounded-3 p-3 m-3 bg-white shadow box-area" style="margin-top: -9rem !important; margin-bottom:-3rem !important">
                 <h1 class="text-center mb-5">VISI MISI</h1>
@@ -101,9 +101,9 @@
                 </ol>
             </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#14274E" fill-opacity="1" d="M0,128L24,128C48,128,96,128,144,117.3C192,107,240,85,288,80C336,75,384,85,432,85.3C480,85,528,75,576,90.7C624,107,672,149,720,149.3C768,149,816,107,864,101.3C912,96,960,128,1008,160C1056,192,1104,224,1152,234.7C1200,245,1248,235,1296,213.3C1344,192,1392,160,1416,144L1440,128L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z" style="margin-bottom: -1000px !important;"></path>
-        </svg>
+        </svg> -->
     </section>
     <!-- akhir visi misi -->
 
